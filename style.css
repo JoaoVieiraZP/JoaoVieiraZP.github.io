@@ -166,6 +166,18 @@ nav .close-btn {
     font-weight: bold;
 }
 
+.card-slearn{
+    background-image: url(src/SLearn.png);
+    background-size: cover;
+    color: white;
+}
+
+.card-slearn a {
+    padding-top: 7px;
+    color: white;
+    font-weight: bold;
+}
+
 .project-card h3 {
     padding-bottom: 1%;
 }
