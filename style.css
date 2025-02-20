@@ -113,10 +113,6 @@ nav .close-btn {
     padding-bottom: 2%;
 }
 
-.section p {
-    word-break: break-all;
-}
-
 #welcome {
     font-size: 25px;
     display: flex;
@@ -172,6 +168,10 @@ nav .close-btn {
 
 .project-card h3 {
     padding-bottom: 1%;
+}
+
+#contato p {
+    word-break: break-all;
 }
 
 #contato i {
