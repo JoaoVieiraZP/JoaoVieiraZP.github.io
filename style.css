@@ -1,5 +1,5 @@
-/* Reset */
-@import  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
+/* Resetando os estilos */
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
 
 * {
     margin: 0;
@@ -11,6 +11,7 @@
 body {
     background-color: #f4f4f4;
     color: #333;
+    height: 100%;
 }
 
 header {
@@ -33,32 +34,130 @@ header {
     letter-spacing: 2px;
 }
 
+.menu-toggle {
+    display: block;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background: #383B40;
+    transition: left 0.3s ease;
+    padding-top: 50px;
+}
+
+nav.active {
+    left: 0;
+}
+
 nav ul {
     list-style: none;
-    display: flex;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li i{
-    align-items: center;
-    justify-content: center;
-    padding-right: 5px;
+    margin: 20px 0;
+    text-align: center;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: 0.2s;
 }
 
 nav ul li a:hover {
     color: #F4C542;
     transform: scale(1.1);
+}
+
+nav ul li i {
+    padding-right: 10px;
+}
+
+nav .close-btn {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: #383B40;
+        padding-top: 50px;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        color: white;
+        display: block;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
 }
 
 .hero {
@@ -69,12 +168,16 @@ nav ul li a:hover {
 }
 
 .section {
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 1100px;
+    margin: 4% 15% 4% 15%;
     padding: 20px;
     background: white;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    padding-bottom: 2%;
 }
 
 .projects {
@@ -89,8 +192,13 @@ nav ul li a:hover {
     color: white;
     padding: 15px;
     border-radius: 8px;
-    width: 300px;
+    width: 40%;
+    min-width: 175px;
     text-align: center;
+}
+
+.project-card h3 {
+    padding-bottom: 1%;
 }
 
 footer {
@@ -99,12 +207,4 @@ footer {
     color: white;
     padding: 15px;
     margin-top: 20px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .projects {
-        flex-direction: column;
-        align-items: center;
-    }
 }
