@@ -62,7 +62,6 @@ nav ul {
 }
 
 nav ul li {
-    margin: 20px 0;
     text-align: center;
 }
 
@@ -77,6 +76,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #F4C542;
+    background-color: #333;
     transform: scale(1.1);
 }
 
@@ -113,6 +113,26 @@ nav .close-btn {
     padding-bottom: 2%;
 }
 
+.section p {
+    word-break: break-all;
+}
+
+#welcome {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#welcome img {
+    border-radius: 50%;
+    border: 3px solid #1A1B1E;
+    width: 150px;
+    height: 150px;
+}
+
 .projects {
     display: flex;
     gap: 20px;
@@ -120,18 +140,48 @@ nav .close-btn {
     justify-content: center;
 }
 
-.project-card {
+.projects a{
+    text-decoration: none;
+}
+
+#project-card {
     background-color: #1A1B1E;
-    color: white;
     padding: 15px;
     border-radius: 8px;
     width: 40%;
     min-width: 175px;
-    text-align: center;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-py{
+    background-image: url(src/pythonsql.png);
+    background-size: cover;
+    filter: brightness(0.8);
+    color: black;
+}
+
+.card-py a {
+    padding-top: 7px;
+    color: #1A1B1E;
+    font-weight: bold;
 }
 
 .project-card h3 {
     padding-bottom: 1%;
+}
+
+#contato i {
+    padding-right: 10px;
+}
+
+#contato a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 footer {
