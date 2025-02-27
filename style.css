@@ -151,6 +151,12 @@ nav .close-btn {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: 0.5s;
+}
+
+#project-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-py{
@@ -180,6 +186,17 @@ nav .close-btn {
 
 .project-card h3 {
     padding-bottom: 1%;
+}
+
+#habilidades img {
+    height: 35px;
+    width: 35px;
+    transition: 0.2s;
+}
+
+#habilidades img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #contato p {
