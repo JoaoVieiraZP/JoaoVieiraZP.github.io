@@ -27,35 +27,36 @@
     <main>
         <section id="principal" class="hero">
             <h2>Bem-vindo ao meu portfólio</h2>
-            <p>Estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia.</p>
+            <p>Estudante de Analise e Desenvolvimento de Sistemas, apaixonado por tecnologia.</p>
         </section>
         
         <section id="welcome" class="section">
             <img src="src/foto_perfil.jfif" alt="Foto de Perfil">
             <h1>João Pedro Vieira Pereira</h1>
-            <h6>Desenvolvedor Web | Análista de Dados - Estudante</h6>
+            <h6>Desenvolvedor Web | Analista de Dados - Estudante</h6>
         </section>
 
         <section id="sobre" class="section">
             <h2>Sobre Mim</h2>
             <p>Sou um desenvolvedor em crescimento, buscando me tornar um programador full-stack e analista de dados.</p>
             <p>Comecei minha jornada aos 15 anos com Arduinos, e desde então, venho explorando diferentes tecnologias e linguagens de programação.</p>
+            <p>Me formei <b>Técnico em Desenvolvimento de Sistema</b> na <b>ETEC Prof. Dr. Antônio Eufrásio de Toledo</b> e em 2024 iniciei na <b>FATEC</b> no curso de <b>Análise e Desenvolvimento de Sistemas</b> e desde então continuo estudando para aprimorar meus conhecimentos.</p>
         </section>
 
         <section id="projetos" class="section">
             <h2>Projetos</h2>
             <div class="projects">
-                <div id="project-card" class="card-py">
+                <div id="project-card" class="card-py" data-url="https://github.com/JoaoVieiraZP/dados" onclick="redirectUrl(this)">
                         <h3>Conversor Excel - SQL</h3>
                         <p>Um conversor de arquivos Excel para SQL</p>
                         <p>Python | SQL</p>
-                        <a href="https://github.com/JoaoVieiraZP/dados">Link do Projeto</a>
+                        <h5>Clique para acessar</h5>
                 </div>
-                <div id="project-card" class="card-slearn">
+                <div id="project-card" class="card-slearn" data-url="https://github.com/oMuraro/SLearn" onclick="redirectUrl(this)">
                     <h3>Plataforma Aprendizado</h3>
                     <p>Projeto Acadêmico realizado em equipe</p>
                     <p>HTML | CSS | JS | PHP</p>
-                    <a href="https://github.com/oMuraro/SLearn">Link do Projeto</a>
+                    <h5>Clique para acessar</h5>
                 </div>
             </div>
         </section>
@@ -72,8 +73,9 @@
 
         <section id="contato" class="section">
             <h2>Contato</h2>
-            <p><i class='bx bxl-gmail'></i>Email: joaopedrovieirapereira5@gmail.com</p>
-            <p><i class='bx bxl-whatsapp'></i>WhatsApp: +55 (18) 93500-1325</p>
+            <p>Clique no ícone para copiar</p>
+            <p><i class='bx bxl-gmail' onclick="copyToClipboard('joaopedrovieirapereira5@gmail.com')"></i>Email: joaopedrovieirapereira5@gmail.com</p>
+            <p><i class='bx bxl-whatsapp' onclick="copyToClipboard('+55 18 93500-1325')"></i>WhatsApp: +55 (18) 93500-1325</p>
             <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-vieira-pereira-7aab772b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin-square' ></i>LinkedIn</a>
         </section>
     </main>

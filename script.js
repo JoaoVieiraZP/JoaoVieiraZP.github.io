@@ -10,6 +10,38 @@ closeBtn.addEventListener('click', () => {
     nav.classList.remove('active');
 });
 
+function redirectUrl(cardElement) {
+    const url = cardElement.getAttribute('data-url');
+    window.open(url, "_blank");
+}
+
+function redirectProj1() {
+    const url = "https://github.com/JoaoVieiraZP/dados";
+    window.open(url, "_blank");
+}
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        let tooltip = document.createElement("div");
+        tooltip.innerText = "Copiado!";
+        tooltip.style.position = "fixed";
+        tooltip.style.bottom = "20px";
+        tooltip.style.right = "20px";
+        tooltip.style.background = "black";
+        tooltip.style.color = "white";
+        tooltip.style.padding = "10px";
+        tooltip.style.borderRadius = "5px";
+        tooltip.style.opacity = "0.9";
+        tooltip.style.transition = "opacity 1s";
+        document.body.appendChild(tooltip);
+
+        setTimeout(() => {
+            tooltip.style.opacity = "0";
+            setTimeout(() => document.body.removeChild(tooltip), 1000);
+        }, 1000);
+    }).catch(err => console.error("Erro ao copiar: ", err));
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const descriptions = {
         "Icone HTML": "HTML (HyperText Markup Language) é a 'linguagem' padrão para criação de páginas web.",
