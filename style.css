@@ -157,10 +157,11 @@ nav .close-btn {
 #project-card:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .card-py{
-    background-image: url(src/pythonsql.png);
+    background-image: url(assets/src/pythonsql.png);
     background-size: cover;
     filter: brightness(0.8);
     color: black;
@@ -173,7 +174,7 @@ nav .close-btn {
 }
 
 .card-slearn{
-    background-image: url(src/SLearn.png);
+    background-image: url(assets/src/SLearn.png);
     background-size: cover;
     color: white;
 }
@@ -196,7 +197,8 @@ nav .close-btn {
 
 #habilidades img:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(4px 5px 2px rgba(0, 0, 0, 0.2));
+    cursor: pointer;
 }
 
 #contato p {
