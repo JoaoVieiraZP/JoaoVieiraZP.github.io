@@ -1,111 +1,23 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
-const closeBtn = document.querySelector('.close-btn');
+AOS.init();
 
-menuToggle.addEventListener('click', () => {
-    nav.classList.add('active');
-});
-
-closeBtn.addEventListener('click', () => {
-    nav.classList.remove('active');
-});
+function toggleTheme() {
+  const body = document.body;
+  const current = body.getAttribute('data-theme');
+  body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+}
 
 function redirectUrl(cardElement) {
-    const url = cardElement.getAttribute('data-url');
-    window.open(url, "_blank");
+  const url = cardElement.getAttribute('data-url');
+  window.open(url, "_blank");
 }
 
-function redirectProj1() {
-    const url = "https://github.com/JoaoVieiraZP/dados";
-    window.open(url, "_blank");
-}
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollToTopButton = document.querySelector('.scroll-to-top');
 
-function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        let tooltip = document.createElement("div");
-        tooltip.innerText = "Copiado!";
-        tooltip.style.position = "fixed";
-        tooltip.style.bottom = "20px";
-        tooltip.style.right = "20px";
-        tooltip.style.background = "black";
-        tooltip.style.color = "white";
-        tooltip.style.padding = "10px";
-        tooltip.style.borderRadius = "5px";
-        tooltip.style.opacity = "0.9";
-        tooltip.style.transition = "opacity 1s";
-        document.body.appendChild(tooltip);
-
-        setTimeout(() => {
-            tooltip.style.opacity = "0";
-            setTimeout(() => document.body.removeChild(tooltip), 1000);
-        }, 1000);
-    }).catch(err => console.error("Erro ao copiar: ", err));
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const descriptions = {
-        "Icone HTML": "HTML (HyperText Markup Language) é a 'linguagem' padrão para criação de páginas web.",
-        "Icone CSS": "CSS (Cascading Style Sheets) é usado para estilizar elementos HTML e criar layouts responsivos.",
-        "Icone JavaScript": "JavaScript é uma linguagem de programação que permite criar scripts em páginas web ou programas.",
-        "Icone Python": "Python é uma linguagem de programação versátil e poderosa, amplamente usada em ciência de dados, IA e desenvolvimento web.",
-        "Icone PowerBI": "Power BI é uma ferramenta da Microsoft para análise de dados e criação de dashboards interativos.",
-        "Icone SQL": "SQL (Structured Query Language) é a linguagem usada para gerenciar e consultar bancos de dados relacionais."
-    };
-
-    const descriptionContainer = document.createElement("div");
-    descriptionContainer.id = "descriptionCard";
-    descriptionContainer.style.border = "1px solid #ccc";
-    descriptionContainer.style.padding = "10px";
-    descriptionContainer.style.marginTop = "10px";
-    descriptionContainer.style.display = "none";
-    document.getElementById("habilidades").appendChild(descriptionContainer);
-
-    document.querySelectorAll("#habilidades img").forEach(img => {
-        img.addEventListener("click", function () {
-            const desc = descriptions[this.alt] || "Descrição não disponível.";
-            descriptionContainer.textContent = desc;
-            descriptionContainer.style.display = "block";
-        });
+  scrollToTopButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0
     });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    document.querySelectorAll("nav ul li a").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            if (targetSection) {
-                const headerHeight = document.querySelector("header").offsetHeight;
-                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
-                
-                smoothScrollTo(targetPosition, 600);
-                
-                console.log(`Rolando até: ${targetId}`);
-            }
-        });
-    });
-
-    function smoothScrollTo(target, duration) {
-        const start = window.scrollY;
-        const startTime = performance.now();
-
-        function scrollStep(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const easeInOutQuad = progress < 0.5
-                ? 2 * progress * progress
-                : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-
-            window.scrollTo(0, start + (target - start) * easeInOutQuad);
-
-            if (elapsed < duration) {
-                requestAnimationFrame(scrollStep);
-            }
-        }
-
-        requestAnimationFrame(scrollStep);
-    }
+  });
 });

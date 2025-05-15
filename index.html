@@ -1,89 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Vieira - Desenvolvedor Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="assets/src/tag.ico" type="image/x-icon">
-    <title>Portfólio - João Vieira</title>
 </head>
 
-<body>
-    <header>
-        <div class="menu-toggle"><i class='bx bx-menu'></i></div>
-        <div class="logo"><i class='bx bx-code-alt'></i> João Pedro</div>
+<body data-theme="dark">
+    <header id="topo">
+        <h1>João Vieira</h1>
         <nav>
-            <div class="close-btn"><i class='bx bx-x'></i></div>
-            <ul>
-                <li><a href="#principal"><i class='bx bx-home'></i> Home</a></li>
-                <li><a href="#sobre"><i class='bx bx-user'></i> Sobre</a></li>
-                <li><a href="#projetos"><i class='bx bx-folder'></i> Projetos</a></li>
-                <li><a href="#contato"><i class='bx bx-envelope'></i> Contato</a></li>
-            </ul>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
         </nav>
-    </header>       
+    </header>
 
-    <main>
-        <section id="principal" class="hero">
-            <h2>Bem-vindo ao meu portfólio</h2>
-            <p>Estudante de Analise e Desenvolvimento de Sistemas, apaixonado por tecnologia.</p>
-        </section>
-        
-        <section id="welcome" class="section">
-            <img src="assets/src/foto_perfil.jfif" alt="Foto de Perfil">
-            <h1>João Pedro Vieira Pereira</h1>
-            <h6>Desenvolvedor Web | Analista de Dados - Estudante</h6>
-        </section>
-
-        <section id="sobre" class="section">
-            <h2>Sobre Mim</h2>
-            <p>Sou um desenvolvedor em crescimento, buscando me tornar um programador full-stack e analista de dados.</p>
-            <p>Comecei minha jornada aos 15 anos com Arduinos, e desde então, venho explorando diferentes tecnologias e linguagens de programação.</p>
-            <p>Me formei <b>Técnico em Desenvolvimento de Sistema</b> na <b>ETEC Prof. Dr. Antônio Eufrásio de Toledo</b> e em 2024 iniciei na <b>FATEC</b> no curso de <b>Análise e Desenvolvimento de Sistemas</b> e desde então continuo estudando para aprimorar meus conhecimentos.</p>
-        </section>
-
-        <section id="projetos" class="section">
-            <h2>Projetos</h2>
-            <div class="projects">
-                <div id="project-card" class="card-py" data-url="https://github.com/JoaoVieiraZP/dados" onclick="redirectUrl(this)">
-                        <h3>Conversor Excel - SQL</h3>
-                        <p>Um conversor de arquivos Excel para SQL</p>
-                        <p>Python | SQL</p>
-                        <h5>Clique para acessar</h5>
-                </div>
-                <div id="project-card" class="card-slearn" data-url="https://github.com/oMuraro/SLearn" onclick="redirectUrl(this)">
-                    <h3>Plataforma Aprendizado</h3>
-                    <p>Projeto Acadêmico realizado em equipe</p>
-                    <p>HTML | CSS | JS | PHP</p>
-                    <h5>Clique para acessar</h5>
-                </div>
-            </div>
-        </section>
-
-        <section id="habilidades" class="section">
-            <h2>Habilidades</h2>
-            <img src="assets/src/html_icon.png" alt="Icone HTML">
-            <img src="assets/src/css_icon.png" alt="Icone CSS">
-            <img src="assets/src/js_icon.png" alt="Icone JavaScript">
-            <img src="assets/src/python_icon.png" alt="Icone Python">
-            <img src="assets/src/powerbi_icon.png" alt="Icone PowerBI">
-            <img src="assets/src/sql_icon.png" alt="Icone SQL">
-        </section>
-
-        <section id="contato" class="section">
-            <h2>Contato</h2>
-            <p>Clique no ícone para copiar</p>
-            <p><i class='bx bxl-gmail' onclick="copyToClipboard('joaopedrovieirapereira5@gmail.com')"></i>Email: joaopedrovieirapereira5@gmail.com</p>
-            <p><i class='bx bxl-whatsapp' onclick="copyToClipboard('+55 18 93500-1325')"></i>WhatsApp: +55 (18) 93500-1325</p>
-            <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-vieira-pereira-7aab772b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin-square' ></i>LinkedIn</a>
-        </section>
+    <main data-aos="fade-up">
+        <h1>Olá, eu sou João Vieira</h1>
+        <p>Desenvolvedor Web apaixonado por criar experiências incríveis.</p>
+        <a href="#contato"><button class="cta-button">Vamos trabalhar juntos</button></a>
     </main>
 
-    <script src="script.js"></script>
+    <section id="sobre" data-aos="fade-right">
+        <h2>Sobre Mim</h2>
+        <p>Meu nome é João Pedro Vieira Pereira, nascido em 25 de janeiro de 2005, na cidade de Presidente Prudente (SP). Desde os 15 anos, comecei a explorar o mundo da tecnologia por conta própria, movido pela curiosidade. Foi nessa época que passei a desmontar computadores, experimentar com hardware e montar pequenos projetos com Arduino.</p>
+
+        <p>Essa paixão inicial me levou a descobrir o universo da programação, o que me motivou a ingressar no curso técnico de Informática na ETEC. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na FATEC de Presidente Prudente, onde continuo desenvolvendo minhas habilidades e aprofundando meus conhecimentos.</p>
+            
+        <p>Tenho grande interesse pelo desenvolvimento front-end, onde busco criar interfaces visualmente atrativas, acessíveis e envolventes. Sou movido por desafios e gosto de entregar resultados de qualidade, sempre focando na experiência do usuário.</p>
+    </section>
+
+    <section id="projetos" data-aos="fade-left">
+        <h2>Projetos</h2>
+        <div class="projects">
+            <div id="project-card" class="card-py" data-url="https://github.com/JoaoVieiraZP/dados" onclick="redirectUrl(this)">
+                    <h3>Conversor Excel - SQL</h3>
+                    <p>Um conversor de arquivos Excel para SQL</p>
+                    <p>Python | SQL</p>
+                    <h5>Clique para acessar</h5>
+            </div>
+            <div id="project-card" class="card-slearn" data-url="https://github.com/oMuraro/SLearn" onclick="redirectUrl(this)">
+                <h3>Plataforma Aprendizado</h3>
+                <p>Projeto Acadêmico realizado em equipe</p>
+                <p>HTML | CSS | JS | PHP</p>
+                <h5>Clique para acessar</h5>
+            </div>
+        </div>
+    </section>
+
+     <section id="contato" data-aos="zoom-in">
+        <h2>Contato</h2>
+        <p>Entre em contato para começarmos seu próximo projeto.</p>
+        <a href="mailto:joaopedrovieirapereira5@gmail.com"><button class="cta-button">Entrar em contato</button></a>
+    </section>
+
+    <a href="#topo" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></a>
 
     <footer>
-        <p>&copy; 2025 João Pedro. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
     </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
