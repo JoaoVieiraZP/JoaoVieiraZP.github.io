@@ -182,7 +182,10 @@ section {
 #skills {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: var(--bg-color2);
+  background-image: url(src/backskill.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #skills h2 {
