@@ -45,3 +45,9 @@ document.querySelector('.scroll-to-top').addEventListener('click', (e) => {
   e.preventDefault();
   smoothScrollToTop(600);
 });
+
+//Animação de PRELOADER para melhorar usabilidade
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  preloader.classList.add("hide");
+});
