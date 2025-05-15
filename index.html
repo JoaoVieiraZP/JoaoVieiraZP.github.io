@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>João Vieira - Desenvolvedor Web</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+    <link rel="manifest" href="src/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,11 +19,12 @@
             <a href="#sobre">Sobre</a>
             <a href="#projetos">Projetos</a>
             <a href="#contato">Contato</a>
-            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+            <button class="theme-toggle" onclick="toggleTheme()">Tema claro</button>
         </nav>
     </header>
 
     <main data-aos="fade-up">
+        <img src="src/foto_perfil.jfif" alt="Foto de Perfil">
         <h1>Olá, eu sou João Vieira</h1>
         <p>Desenvolvedor Web apaixonado por criar experiências incríveis.</p>
         <a href="#contato"><button class="cta-button">Vamos trabalhar juntos</button></a>
@@ -56,13 +60,25 @@
      <section id="contato" data-aos="zoom-in">
         <h2>Contato</h2>
         <p>Entre em contato para começarmos seu próximo projeto.</p>
-        <a href="mailto:joaopedrovieirapereira5@gmail.com"><button class="cta-button">Entrar em contato</button></a>
+
+        <form action="https://formsubmit.co/joaopedrovieirapereira5@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="message" placeholder="Sua mensagem" required></textarea>
+          
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+          
+            <button type="submit" class="cta-button">Enviar</button>
+          </form>          
     </section>
+
+  
 
     <a href="#topo" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></a>
 
     <footer>
-        <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+        &copy; 2025 João Pedro Vieira Pereira. Todos os direitos reservados.
     </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

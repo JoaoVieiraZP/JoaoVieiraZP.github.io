@@ -8,9 +8,13 @@
 }
 
 [data-theme="light"] {
-  --bg-color: #efefef;
-  --bg-color2: #ffffff;
+  --bg-color: #ffffff;
+  --bg-color2: #efefef;
   --text-color: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -21,7 +25,6 @@
 }
 
 body {
-  overflow-x: hidden;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
@@ -32,11 +35,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 nav a {
-  margin-left: 1rem;
   text-decoration: none;
   color: var(--text-color);
   font-weight: 500;
@@ -50,10 +66,28 @@ nav a:hover {
   background: none;
   border: 1px solid var(--text-color);
   color: var(--text-color);
-  padding: 0.3rem 0.6rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+}
+
+img {
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  width: 150px;
+  height: 150px;
 }
 
 main {
@@ -83,10 +117,10 @@ p {
 }
 
 #project-card {
-  background-color: #1A1B1E;
   padding: 15px;
   border-radius: 8px;
-  width: 40%;
+  width: 80%;
+  max-width: 480px;
   min-width: 175px;
   min-height: 150px;
   display: flex;
@@ -98,7 +132,6 @@ p {
 
 #project-card:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
@@ -106,19 +139,19 @@ p {
   background-image: url(src/pythonsql.png);
   background-size: cover;
   filter: brightness(0.8);
-  color: black;
+  color: #000000;
 }
 
 .card-py a {
   padding-top: 7px;
-  color: #1A1B1E;
+  color: var(--bg-color2);
   font-weight: bold;
 }
 
 .card-slearn{
   background-image: url(src/SLearn.png);
   background-size: cover;
-  color: white;
+  color: #ffffff;
 }
 
 .card-slearn a {
@@ -153,15 +186,61 @@ h2 {
   margin-bottom: 1rem;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--bg-color2);
+  color: var(--text-color);
+  font-size: 1rem;
+  resize: none;
+  transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 2px solid var(--accent-color);
+  background-color: var(--bg-color);
+}
+
+form textarea {
+  min-height: 150px;
+}
+
+form .cta-button {
+  width: fit-content;
+}
+
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: var(--accent-color);
   color: white;
-  padding: 15px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: #e04343;
 }
 
 footer {
