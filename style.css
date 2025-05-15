@@ -87,12 +87,16 @@ img {
 }
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   padding: 4rem 2rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
@@ -367,4 +371,18 @@ footer {
 #preloader.hide {
   opacity: 0;
   visibility: hidden;
+}
+
+#typewriter {
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+  border-right: 2px solid #ffffff;
+  width: fit-content;
+  padding-right: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #ffffff; }
 }

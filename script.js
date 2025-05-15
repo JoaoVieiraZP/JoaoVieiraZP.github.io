@@ -51,3 +51,39 @@ window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
   preloader.classList.add("hide");
 });
+
+//Animação no nome principal
+const elementos = ["João Vieira", "Desenvolvedor", "Programador Web", "Front-End"];
+const target = document.getElementById("typewriter");
+
+let palavraIndex = 0;
+let letraIndex = 0;
+let deletando = false;
+
+//Função da animação em si
+function digitar() {
+    const palavraAtual = elementos[palavraIndex];
+
+    if (!deletando) {
+        target.textContent = palavraAtual.substring(0, letraIndex + 1);
+        letraIndex++;
+
+        if (letraIndex === palavraAtual.length) {
+            deletando = true;
+            setTimeout(digitar, 2000);
+            return;
+        }
+    } else {
+        target.textContent = palavraAtual.substring(0, letraIndex - 1);
+        letraIndex--;
+
+        if (letraIndex === 0) {
+            deletando = false;
+            palavraIndex = (palavraIndex + 1) % elementos.length;
+        }
+    }
+    //Velocidade de apagar/digitar
+    setTimeout(digitar, deletando ? 80 : 120);
+}
+
+document.addEventListener("DOMContentLoaded", digitar);
