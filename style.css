@@ -2,7 +2,8 @@
   --bg-color: #161616;
   --bg-color2: #0e0e0e;
   --text-color: #ffffff;
-  --accent-color: #ff4b4b;
+  --accent-color: #00B894;
+  --accent-hover: #009973;
   --light-bg: #f0f0f0;
   --light-text: #111;
 }
@@ -56,6 +57,7 @@ nav a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 500;
+  transition: 0.3s;
 }
 
 nav a:hover {
@@ -69,18 +71,12 @@ nav a:hover {
   padding: 0.4rem 0.8rem;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  nav {
-    justify-content: flex-start;
-  }
+.theme-toggle:hover {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color)
 }
 
 img {
@@ -133,6 +129,7 @@ p {
 #project-card:hover {
   transform: scale(1.1);
   cursor: pointer;
+  background-color: var(--accent-hover);
 }
 
 .card-py{
@@ -175,10 +172,57 @@ p {
 .cta-button:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: var(--accent-hover);
 }
 
 section {
   padding: 4rem 2rem;
+}
+
+#skills {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--bg-color2);
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill {
+  background-color: var(--bg-color);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-weight: bold;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  background-color: var(--accent-hover);
+  color: var(--bg-color);
+  i {
+    color: var(--bg-color);
+  }
+}
+
+.skill i {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: var(--accent-color);
+  transition: 0.3s;
 }
 
 h2 {
@@ -240,7 +284,7 @@ form .cta-button {
 }
 
 .scroll-to-top:hover {
-  background-color: #e04343;
+  background-color: var(--accent-hover);
 }
 
 footer {
@@ -250,4 +294,16 @@ footer {
   background-color: var(--bg-color2);
   padding: 1rem 2rem 1rem 2rem;
   font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
 }

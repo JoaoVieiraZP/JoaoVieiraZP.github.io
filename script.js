@@ -1,3 +1,4 @@
+//Função para mudar o tema da página
 function toggleTheme() {
   const body = document.body;
   const button = document.getElementsByClassName('theme-toggle')[0];
@@ -12,11 +13,13 @@ function toggleTheme() {
   }
 }
 
+//Função de redirecionamento da página
 function redirectUrl(cardElement) {
   const url = cardElement.getAttribute('data-url');
   window.open(url, "_blank");
 }
 
+//Função para a animação suave de subir a página
 function smoothScrollToTop(duration = 600) {
   const start = window.scrollY || window.pageYOffset;
   const startTime = performance.now();
@@ -37,6 +40,7 @@ function smoothScrollToTop(duration = 600) {
   requestAnimationFrame(scroll);
 }
 
+//Função para subir ao topo da página
 document.querySelector('.scroll-to-top').addEventListener('click', (e) => {
   e.preventDefault();
   smoothScrollToTop(600);
