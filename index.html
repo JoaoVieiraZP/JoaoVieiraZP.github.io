@@ -21,15 +21,15 @@
     <header id="topo">
         <h1>João Vieira</h1>
         <nav>
+            <a href="index.html">Home</a>
             <a href="#sobre">Sobre</a>
-            <a href="#projetos">Projetos</a>
             <a href="#contato">Contato</a>
             <button class="theme-toggle" onclick="toggleTheme()">Tema claro</button>
         </nav>
     </header>
 
     <main>
-        <img src="src/foto_perfil.jfif" alt="Foto de Perfil">
+        <img id="perfil" src="src/foto_perfil.jfif" alt="Foto de Perfil">
         <h1>Olá, eu sou</h1>
             <h1 id="typewriter">João Vieira</h1>
         <p>Desenvolvedor Web apaixonado por criar experiências incríveis.</p>
@@ -61,11 +61,11 @@
     <section id="projetos">
         <h2>Projetos</h2>
         <div class="projects">
-            <div id="project-card" class="card-py" data-url="https://github.com/JoaoVieiraZP/dados" onclick="redirectUrl(this)">
-                    <h3>Conversor Excel - SQL</h3>
-                    <p>Um conversor de arquivos Excel para SQL</p>
-                    <p>Python | SQL</p>
-                    <h5>Clique para acessar</h5>
+            <div id="project-card" class="card-py" data-url="projSqlExcel.html" onclick="openProject(this)">
+                <h3>Conversor Excel - SQL</h3>
+                <p>Um conversor de arquivos Excel para SQL</p>
+                <p>Python | SQL</p>
+                <h5>Clique para acessar</h5>
             </div>
             <div id="project-card" class="card-slearn" data-url="https://github.com/oMuraro/SLearn" onclick="redirectUrl(this)">
                 <h3>Plataforma Aprendizado</h3>

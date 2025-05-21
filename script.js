@@ -19,6 +19,12 @@ function redirectUrl(cardElement) {
   window.open(url, "_blank");
 }
 
+//Função de abrir página pelo card
+function openProject(cardElement) {
+  const url = cardElement.getAttribute('data-url');
+  window.location.href = url;
+}
+
 //Função para a animação suave de subir a página
 function smoothScrollToTop(duration = 600) {
   const start = window.scrollY || window.pageYOffset;

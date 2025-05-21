@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Vieira - Desenvolvedor Web</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+    <link rel="manifest" href="src/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="dark">
+
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+      
+    <header id="topo">
+        <h1>João Vieira</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#tecs">Projeto</a>
+            <a href="#prints">Telas</a>
+            <button class="theme-toggle" onclick="toggleTheme()">Tema claro</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1><i class="fas fa-database"></i> Projeto Conversor SQL para Excel <i class="fa-solid fa-file-excel"></i></h1>
+        <p>Versão: 1.0</p>
+        <p>Este projeto contém dois scripts que facilitam a integração entre um banco de dados MySQL e um arquivo Excel, permitindo a extração de dados, a manipulação e a reintegração desses dados de volta ao banco.</p>
+
+        <p>Foram montados dois scripts atuais, sendo um para o envio da tabela Excel para o banco de dados e um de extração do banco de dados para a tabela Excel</p>
+    </main>
+
+    <section id="tecs">
+        <h2>Técnologias utilizadas <i class="fa-solid fa-laptop-code"></i></h2>
+        <p>Foi utilizada de linguagem principal o Python com a integração de bibliotecas como:</p>
+        <ul>
+            <li>Pandas</li>
+            <li>OS</li>
+            <li>MySqlConnector</li>
+        </ul>
+        <p></p>
+    </section>
+
+    <section id="melhorias">
+        <h2>Melhorias a serem implementadas <i class="fa-solid fa-circle-up"></i></h2>
+        <ul>
+            <li>Interface para a melhor utilização</li>
+            <li>Modificar dentro da interface como quer as tabelas e/ou banco</li>
+        </ul>
+    </section>
+
+    <section id="prints">
+        <div id="resumo">
+        <h2>Prints do projeto</h2>
+            <p>O código atual do projeto se encontra fixo, ou seja, funciona somente modificando diretamente o código fonte Python:</p>
+        </div>
+        <img src="src/ProjSqlExcel/code1.png" alt="Código base" id="telas">
+        <div id="resumo">
+            <p>A tabela utilizada atualmente é simples, utilizando a primeira linha como titulo para as informações no banco e o resto como os itens que serão inseridos dentro das tabelas:</p>
+        </div>
+        <img src="src/ProjSqlExcel/tabela1.png" alt="Tabela de exemplo" id="telas" >
+        <div id="resumo">
+            <p>Após iniciar o programa e executar, ele vai importar as informações e gerar as tabelas</p>
+        </div>
+        <img src="src/ProjSqlExcel/banco1.png" alt="" id="telas">
+        <div id="resumo">
+            <p>E vai inserir cada <b>informação especificada</b> no código como uma tabela separada para ser utilizada</p>
+        </div>
+        <img src="src/ProjSqlExcel/tabela2.png" alt="" id="telas">
+
+        <button class="cta-button" data-url="https://github.com/JoaoVieiraZP/dados" onclick="redirectUrl(this)">Ver repositório GitHub <i class="fab fa-github"></i></button>
+    </section>
+
+    <a href="#topo" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <footer>
+        <div class="social-icons">
+          <a href="https://github.com/JoaoVieiraZP" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-vieira-pereira-7aab772b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        &copy; 2025 João Pedro Vieira Pereira. Todos os direitos reservados.
+    </footer>      
+
+    <script src="script.js"></script>
+</body>
+
+</html>

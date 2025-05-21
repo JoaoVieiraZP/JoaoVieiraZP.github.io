@@ -40,13 +40,6 @@ header {
   flex-wrap: wrap;
 }
 
-.header-content {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
 nav {
   display: flex;
   align-items: center;
@@ -79,7 +72,7 @@ nav a:hover {
   color: var(--accent-color)
 }
 
-img {
+#perfil {
   border-radius: 50%;
   border: 3px solid var(--accent-color);
   width: 150px;
@@ -271,6 +264,32 @@ form textarea {
 
 form .cta-button {
   width: fit-content;
+}
+
+#melhorias {
+  background-image: url(src/ProjSqlExcel/upgrade.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#prints {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#resumo {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+#telas {
+  border: 3px solid var(--bg-color2);
+  width: 75%;
+  margin-bottom: 50px;
 }
 
 .scroll-to-top {
