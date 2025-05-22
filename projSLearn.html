@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Vieira - Desenvolvedor Web</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+    <link rel="manifest" href="src/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="dark">
+
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+      
+    <header id="topo">
+        <h1>João Vieira</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#tecs">Projeto</a>
+            <a href="#prints">Telas</a>
+            <button class="theme-toggle" onclick="toggleTheme()">Tema claro</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1><i class="fa-solid fa-code"></i> Projeto Plataforma de ensino SLearn <i class="fa-solid fa-book"></i></h1>
+        <p>O <b>SLearn</b> é um sistema feito em grupo para a aquisição de nota parcial na matéria de Estrutura de Dados do curso DS-AMS da Fatec de Presidente Prudente.</p>
+
+        <p>Sendo um sistema simples com conteúdos educativos sobre: "Listas de Encadeadas", e "Tipos Abstratos de Dados". As listas encadeadas contém duas versões: A simples, e a Dupla</p>
+    </main>
+
+    <section id="tecs">
+        <h2>Técnologias utilizadas <i class="fa-solid fa-laptop-code"></i></h2>
+        <p>Foram utilizadas linguagens web para montar o site como:</p>
+        <ul>
+            <li>Linguagem de marcação HTML</li>
+            <li>Linguagem de estilização CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+        </ul>
+        <p></p>
+    </section>
+
+    <section id="prints">
+        <div id="resumo">
+        <h2>Prints do projeto</h2>
+            <p>O projeto se encontra na fase final, considerando que foi feito para um trabalho em grupo para a Fatec de Presidente Prudente</p>
+        </div>
+        <img src="src/ProjSLearn/tela1.png" alt="Tela inicial" id="telas">
+        <div id="resumo">
+            <p>Essa é a tela inicial quando você entra no site</p>
+        </div>
+        <img src="src/ProjSLearn/tela2.png" alt="Tela logado" id="telas" >
+        <div id="resumo">
+            <p>Após o login ser feito, ele entra nessa página, onde ficam disponiveis as aulas, a loja para a compra de itens para o perfil e o quiz</p>
+        </div>
+        <img src="src/ProjSLearn/telaLoja.png" alt="Loja" id="telas">
+        <div id="resumo">
+            <p>A loja é feita para customizar o perfil do usuário, dando uma sensação de evolução conforme o resultado no quiz</p>
+        </div>
+        <img src="src/ProjSLearn/telaQuiz.png" alt="Quiz" id="telas">
+        <div id="resumo">
+            <p>O quiz foi feito com três niveis de dificuldade e era pretendido um modo história, porém <b>não foi finalizado</b></p>
+            <p>Os resultados do quiz dão recompensas para serem gastas na loja do site</p>
+            <p>O quiz também tem um sistema de perguntas aleatórias e uma pontuação variante conforme o nivel de dificuldade selecionado</p>
+        </div>
+        <img src="src/ProjSLearn/telaCont.png" alt="Conteúdo" id="telas">
+        <div id="resumo">
+            <p>O aprendizado foi feito por "capitulos", além de ter um conteúdo completo, com videos de exemplo, código para demonstração e explicação não somente do código, mas da teoria por inteiro!</p>
+        </div>
+        <img src="src/ProjSLearn/telaInv.png" alt="Inventário" id="telas">
+        <div id="resumo">
+            <p>O Inventário é onde ficam armazenados os itens comprados na loja, sendo um slot (local) para cada item, como chapéu, roupa, arma e calçados</p>
+        </div>
+
+        <h3>Se você teve interesse no código e deseja ver com mais detalhes, veja nosso repositório GitHub!</h3><br>
+        <button class="cta-button" data-url="https://github.com/oMuraro/SLearn" onclick="redirectUrl(this)">Ver repositório GitHub <i class="fab fa-github"></i></button>
+    </section>
+
+    <a href="#topo" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <footer>
+        <div class="social-icons">
+          <a href="https://github.com/JoaoVieiraZP" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-vieira-pereira-7aab772b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        &copy; 2025 João Pedro Vieira Pereira. Todos os direitos reservados.
+    </footer>      
+
+    <script src="script.js"></script>
+</body>
+
+</html>
