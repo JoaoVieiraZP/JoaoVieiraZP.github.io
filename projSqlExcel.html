@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>João Vieira - Sincronização MySQL-Excel</title> <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
+    <title>João Vieira - Sincronização MySQL-Excel</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
     <link rel="manifest" href="src/site.webmanifest">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -28,54 +30,67 @@
     </header>
 
     <main>
-        <h1><i class="fas fa-database"></i> Sincronização MySQL para Excel <i class="fa-solid fa-file-excel"></i></h1>
-        <p>Versão: 1.1 (Dinâmica)</p> <p>Este projeto oferece um conjunto de scripts Python poderosos para facilitar a <b>sincronização bidirecional e dinâmica</b> entre um banco de dados MySQL e arquivos Excel. Ele permite que você extraia dados de <b>qualquer tabela</b> do seu MySQL para uma planilha Excel e, inversamente, importe dados de <b>qualquer planilha Excel</b> para uma nova tabela no seu banco de dados.</p>
-
-        <p>Com estes scripts, você pode automatizar a gestão de dados, tornando o processo de importação e exportação flexível e eficiente, sem a necessidade de modificações manuais no código para cada nova tabela.</p>
+        <h1><i class="fas fa-database"></i> Sincronização MySQL & Excel <i class="fa-solid fa-file-excel"></i></h1>
+        <p>Versão: 1.0 (GUI Interativa)</p>
+        <p>Este projeto oferece um conjunto de scripts Python poderosos que facilitam a <b>sincronização bidirecional e dinâmica</b> entre um banco de dados MySQL e arquivos Excel.</p>
+        <p>Ele permite que você:
+            <ul>
+                <li>Extraia dados de <b>qualquer tabela</b> do seu MySQL para uma planilha Excel.</li>
+                <li>Importe dados de <b>qualquer planilha Excel</b> para uma nova tabela no seu banco de dados.</li>
+                <li>Tudo isso através de uma <b>Interface Gráfica de Usuário (GUI)</b> moderna e intuitiva.</li>
+            </ul>
+        </p>
+        <p>Com este aplicativo, você pode automatizar a gestão de dados, tornando o processo de importação e exportação flexível e eficiente, <b>sem a necessidade de modificações manuais no código</b> para cada nova tabela ou operação.</p>
     </main>
 
     <section id="tecs">
         <h2>Tecnologias Utilizadas <i class="fa-solid fa-laptop-code"></i></h2>
-        <p>O projeto é desenvolvido em Python, utilizando bibliotecas essenciais para manipulação de dados e interação com bancos de dados e arquivos Excel:</p>
+        <p>O projeto é desenvolvido em <b>Python</b>, utilizando bibliotecas essenciais para manipulação de dados, criação da interface gráfica e interação com bancos de dados e arquivos Excel:</p>
         <ul>
-            <li><b>pandas</b>: Para leitura, manipulação e exportação de dados em formato tabular (DataFrames).</li>
-            <li><b>mysql-connector-python</b>: Para estabelecer conexão e interagir com o banco de dados MySQL.</li>
-            <li><b>openpyxl</b>: Para manipulação avançada de arquivos Excel, como ajuste automático de largura de colunas e formatação.</li>
-            <li><b>os</b>: Para operações de sistema de arquivos, como gerenciamento de caminhos.</li>
+            <li><b>`CustomTkinter`</b>: Para a criação da interface gráfica moderna e interativa.</li>
+            <li><b>`pandas`</b>: Para leitura, manipulação e exportação eficiente de dados tabulares.</li>
+            <li><b>`mysql-connector-python`</b>: Para estabelecer conexão e interagir com o banco de dados MySQL.</li>
+            <li><b>`openpyxl`</b>: Para manipulação e estilização avançada de arquivos Excel.</li>
+            <li><b>`threading`</b>: Para manter a interface gráfica responsiva durante operações de dados demoradas.</li>
+            <li><b>`json`</b>: Para persistência e carregamento das configurações do banco de dados.</li>
+            <li><b>`os`</b>: Para operações de sistema de arquivos e gerenciamento de caminhos.</li>
         </ul>
     </section>
 
     <section id="melhorias">
         <h2>Melhorias Futuras <i class="fa-solid fa-circle-up"></i></h2>
         <ul>
-            <li><b>Interface Gráfica (GUI)</b>: Implementar uma interface de usuário intuitiva para facilitar a seleção de arquivos, tabelas e configurações de importação/exportação, eliminando a necessidade de interação direta com o código.</li>
-            <li><b>Mapeamento de Tipos Avançado</b>: Adicionar opções de configuração para lidar com tipos de dados complexos ou específicos, permitindo maior controle sobre o esquema da tabela MySQL gerada a partir do Excel.</li>
-            <li><b>Tratamento de Conflitos (Upsert)</b>: Adicionar lógica para lidar com a atualização de registros existentes durante a importação (UPSERT), em vez de apenas inserção.</li>
-            <li><b>Log de Operações</b>: Implementar um sistema de log detalhado para registrar o sucesso ou falha das operações, facilitando a depuração e o monitoramento.</li>
+            <li><b>Mapeamento de Colunas Avançado</b>: Adicionar opções na GUI para mapear e transformar colunas durante a importação, garantindo maior controle sobre o esquema da tabela MySQL.</li>
+            <li><b>Mais Modos de Importação</b>: Implementar opções adicionais como `UPSERT` (Atualizar/Inserir) ou `UPDATE ONLY` para cenários de sincronização de dados mais complexos.</li>
+            <li><b>Gerenciamento de Erros Aprimorado</b>: Incluir um sistema de log detalhado para arquivo e notificações mais específicas na GUI para facilitar a depuração e o monitoramento.</li>
+            <li><b>Suporte a Outros Bancos de Dados</b>: Expandir a compatibilidade para incluir outros sistemas de gerenciamento de banco de dados, como PostgreSQL ou SQLite.</li>
         </ul>
     </section>
 
     <section id="prints">
         <div id="resumo">
-        <h2>Exemplos de Uso <i class="fas fa-code"></i></h2> <p>Os scripts são projetados para serem dinâmicos, aceitando o nome da tabela ou o caminho do arquivo Excel como parâmetros. Veja abaixo um exemplo do fluxo:</p>
+            <h2>Fluxo de Uso do Aplicativo <i class="fas fa-code"></i></h2>
+            <p>Os scripts são projetados para serem dinâmicos e flexíveis, aceitando o nome da tabela ou o caminho do arquivo Excel como parâmetros através da interface gráfica.</p>
+            <p>As imagens abaixo ilustram o <b>fluxo conceitual</b> de como o aplicativo lê, processa e manipula os dados, adaptando-se a diferentes estruturas de tabelas. A interface gráfica atual, construída com `CustomTkinter`, oferece uma experiência de usuário ainda mais intuitiva e moderna do que a representação por linha de comando.</p>
         </div>
-        <img src="src/ProjSqlExcel/code1.png" alt="Código base" id="telas">
+        
+        <img src="src/ProjSqlExcel/code1.png" alt="Código base do script" id="telas">
         <div id="resumo">
-            <p>Para <b>importar</b>, o script lê qualquer planilha Excel, detecta suas colunas e tipos de dados, e cria ou atualiza uma tabela correspondente no MySQL. A flexibilidade permite o uso de diversas estruturas de dados:</p>
+            <p>Para <b>importar</b>, o aplicativo lê qualquer planilha Excel. Ele detecta automaticamente suas colunas e tipos de dados, permitindo criar ou sobrescrever uma tabela correspondente no MySQL. A flexibilidade é um ponto chave, adaptando-se a diversas estruturas de dados fornecidas:</p>
         </div>
-        <img src="src/ProjSqlExcel/tabela1.png" alt="Tabela de exemplo" id="telas" >
+        <img src="src/ProjSqlExcel/tabela1.png" alt="Tabela Excel de exemplo" id="telas">
         <div id="resumo">
-            <p>Ao executar o script de importação, ele processa as informações e gera as tabelas no seu banco de dados MySQL, adaptando-se à estrutura da planilha fornecida:</p>
+            <p>Após a execução da importação via GUI, o aplicativo processa as informações e gera a tabela no seu banco de dados MySQL, adaptando-se à estrutura da planilha fornecida:</p>
         </div>
         <img src="src/ProjSqlExcel/banco1.png" alt="Banco de dados após importação" id="telas">
         <div id="resumo">
-            <p>As informações são inseridas em tabelas com nomes e estruturas correspondentes àquelas do arquivo Excel, prontas para serem utilizadas ou consultadas:</p>
+            <p>As informações são inseridas em tabelas com nomes e estruturas correspondentes àquelas do arquivo Excel, prontas para serem utilizadas ou consultadas. O aplicativo lida com modos de importação como 'Adicionar' ou 'Sobrescrever' dados existentes:</p>
         </div>
-        <img src="src/ProjSqlExcel/tabela2.png" alt="Tabela MySQL preenchida" id="telas">
+        <img src="src/ProjSqlExcel/tabela2.png" alt="Detalhe da tabela MySQL preenchida" id="telas">
         <div id="resumo">
-            <p>Para <b>exportar</b>, basta especificar o nome da tabela do MySQL que deseja extrair, e o script gerará um arquivo Excel com todos os seus dados e formatação automática.</p>
+            <p>Para <b>exportar</b>, basta selecionar o nome da tabela do MySQL que deseja extrair na interface gráfica. O aplicativo então gerará um arquivo Excel com todos os dados da tabela, com formatação automática para facilitar a visualização:</p>
         </div>
-        <img src="src/ProjSqlExcel/tabela3.png" alt="Tabela SQL exportada" id="telas">
+        <img src="src/ProjSqlExcel/tabela3.png" alt="Tabela SQL exportada para Excel" id="telas">
 
         <button class="cta-button" data-url="https://github.com/JoaoVieiraZP/dados" onclick="redirectUrl(this)">Ver repositório GitHub <i class="fab fa-github"></i></button>
     </section>
