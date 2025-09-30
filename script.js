@@ -59,7 +59,7 @@ window.addEventListener("load", () => {
 });
 
 //Animação no nome principal
-const elementos = ["João Vieira", "Desenvolvedor", "Programador Python"];
+const elementos = ["João Vieira", "Desenvolvedor Front-End", "Programador"];
 const target = document.getElementById("typewriter");
 
 let palavraIndex = 0;
